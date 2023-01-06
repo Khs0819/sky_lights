@@ -110,7 +110,7 @@
           <!--logo-->
 
           <!--content-->
-          <div class="col-lg-5 col-md-6 mb-4 mb-md-0 my-5 ">
+          <div class="col-lg-5 col-md-6 mb-4 mb-md-0 my-5 m">
             <h5 class="text-uppercase" style="color: #f6dd7b !important;"> الرئيسية </h5>
 
             <p class="mt-5 mb-2">
@@ -156,7 +156,7 @@
 <!-- End WhatsApp -->
 
     <script src="{{ asset('website/assets/js/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ asset('website/assets/js/bootstrap.min.js') }}"></script>
+    {{-- <script src="{{ asset('website/assets/js/bootstrap.min.js') }}"></script> --}}
     <script src="{{ asset('website/assets/js/aos.js') }}"></script>
     <script src="{{ asset('website/assets/js/custom.js') }}"></script>
 

@@ -38,7 +38,6 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $validator = Validator($request->all() , [
-            'title' => 'required|string',
             'expert_description' => 'required|string'
         ]);
 
@@ -91,7 +90,6 @@ class AboutController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator($request->all() , [
-            'title' => 'required|string',
             'expert_description' => 'required|string'
         ]);
 

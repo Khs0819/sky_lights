@@ -1,6 +1,8 @@
 <?php
 use App\Models\Service_description;
 $service_descriptions = Service_description::all();
+use App\Models\Service_image;
+$service_images = Service_image::all();
 ?>
 @extends('website.parent')
 
@@ -20,7 +22,7 @@ $service_descriptions = Service_description::all();
         <div class="row align-items-center">
           <div class="col-lg-6 mx-auto text-center">
             <div class="intro-wrap mx-auto">
-              <h1 class="mb-0 animate__animated animate__fadeInUp">خدماتنا</h1>
+              <h1 class="mb-0 animate__animated animate__fadeInUp O">خدماتنا</h1>
               @foreach ($services as $service)
               <p class="text-white">{{ $service->title}}</p>
               @endforeach
@@ -30,34 +32,37 @@ $service_descriptions = Service_description::all();
       </div>
     </div>
 
-  @foreach ( $service_descriptions as $service_description )
-  <section class="collection2 mb-5 S">
-      <div class="container">
-          <div class="text">
-              <h5>{{ $service_description->name }}</h5>
-              <p>
-                {{ $service_description->description }}
-              </p>
+    <section class="my-5">
+        @foreach ( $service_descriptions as $service_description )
+        <section class="collection2 mb-5 S">
+            <div class="container">
+                <div class="text">
+                    <h5>{{ $service_description->name }}</h5>
+                    <p>
+                      {{ $service_description->description }}
+                    </p>
 
-          </div>
-        <!-- carousel -->
-        <div class="main-carousel">
-            @foreach ( as )
-            <div class="cell"><img src="assets/images/sections_img/section 1.png" alt=""></div>
-            @endforeach
-
-
-        </div>
+                </div>
+              <!-- carousel -->
+              <div class="main-carousel">
+                  @foreach ($service_images as $service_image)
+                  <div class="cell"><img src="{{ asset('storage/images/service_image/'.$service_image->image) }}" alt=""></div>
+                  @endforeach
 
 
-          <div class="foot">
-              <button class="btn btn-outline-white rounded-0" type="button">عرض المزيد </button>
-          </div>
+              </div>
 
 
-      </div>
-  </section>
-  @endforeach
+                <div class="foot">
+                    <a href="{{ route('website.gallery') }}" class="btn btn-outline-white rounded-0" type="button">عرض المزيد </a>
+                </div>
+
+
+            </div>
+        </section>
+        @endforeach
+    </section>
+
 
 
 

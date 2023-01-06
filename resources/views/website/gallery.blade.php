@@ -21,7 +21,7 @@ $gallery_videos = GalleryVideo::all();
         <div class="row align-items-center">
           <div class="col-lg-6 mx-auto text-center">
             <div class="intro-wrap mx-auto">
-              <h1 class="mb-0 animate__animated animate__fadeInUp">معرض الأعمال</h1>
+              <h1 class="mb-0 animate__animated animate__fadeInUp O">معرض الأعمال</h1>
               @foreach ($galleries as $gallery )
               <p class="text-white">{{$gallery->title}}</p>
               @endforeach

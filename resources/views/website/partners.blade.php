@@ -19,7 +19,7 @@ $partner_images = PartnerImage::all();
         <div class="row align-items-center">
           <div class="col-lg-6 mx-auto text-center">
             <div class="intro-wrap mx-auto">
-              <h1 class="mb-0 animate__animated animate__fadeInUp">شركاءنا</h1>
+              <h1 class="mb-0 animate__animated animate__fadeInUp O">شركاءنا</h1>
               @foreach ($partners as $partner)
               <p class="text-white">{{$partner->title}}</p>
               @endforeach

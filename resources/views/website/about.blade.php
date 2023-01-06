@@ -21,7 +21,7 @@ $principles = Principle::all();
         <div class="row align-items-center">
           <div class="col-lg-6 mx-auto text-center">
             <div class="intro-wrap mx-auto">
-              <h1 class="mb-0 animate__animated animate__fadeInUp">عن شركتنا</h1>
+              <h1 class="mb-0 animate__animated animate__fadeInUp O">عن شركتنا</h1>
               @foreach ($abouts as $about)
               <p class="text-white">{{ $about->title }}</p>
                 @endforeach

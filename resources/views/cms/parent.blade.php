@@ -295,13 +295,7 @@
             <li class="nav-header">
                 الاعدادات
            </li>
-
-            <li class="nav-item">
-                <a href="{{ route('messages.index') }}" class="nav-link">
-                  <i class="fas fa-edit"></i>
-                  <p>تغيير كلمة المرور</p>
-                </a>
-              </li>
+           
             <li class="nav-item">
                 <a href="{{ route('view.test') }}" class="nav-link">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>

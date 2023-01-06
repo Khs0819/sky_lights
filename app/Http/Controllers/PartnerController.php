@@ -37,7 +37,7 @@ class PartnerController extends Controller
     public function store(Request $request)
     {
         $validator = Validator($request->all() , [
-            'title' => 'required|string',
+            
         ]);
 
           if(! $validator->fails()){
@@ -88,7 +88,7 @@ class PartnerController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator($request->all() , [
-            'title' => 'required|string',
+
         ]);
 
         if (! $validator->fails()){
