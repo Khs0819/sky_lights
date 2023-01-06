@@ -38,7 +38,6 @@ Route::get('/', function () {
     Route::prefix('cms/admin/')->group(function(){
         Route::view('' , 'cms.parent')->name('cms.parent');
         Route::view('temp' , 'cms.temp');
-
         Route::resource('service_images' , Service_ImageController::class);
         Route::post('update-service_images/{id}' , [Service_ImageController::class , 'update'])->name('update-service_images');
         Route::resource('services' , ServiceController::class);
